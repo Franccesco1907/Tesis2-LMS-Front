@@ -29,11 +29,11 @@ export class StudentHomeComponent implements OnInit {
 
   ngOnInit() {
     this.myAssignment = [
-      { _id: "1", courseCode: "CSC103", status: "completed", dueDate: "24-01-2019" },
-      { _id: "2", courseCode: "CSC303", status: "completed", dueDate: "04-02-2019" },
-      { _id: "3", courseCode: "CSC603", status: "pending", dueDate: "10-01-2019" },
-      { _id: "4", courseCode: "CSC703", status: "completed", dueDate: "14-01-2019" },
-      { _id: "5", courseCode: "CSC803", status: "pending", dueDate: "22-02-2019" },
+      { _id: "1", courseCode: "CSC103", status: "completado", dueDate: "24-01-2019" },
+      { _id: "2", courseCode: "CSC303", status: "completado", dueDate: "04-02-2019" },
+      { _id: "3", courseCode: "CSC603", status: "pendiente", dueDate: "10-01-2019" },
+      { _id: "4", courseCode: "CSC703", status: "completado", dueDate: "14-01-2019" },
+      { _id: "5", courseCode: "CSC803", status: "pendiente", dueDate: "22-02-2019" },
 
     ]
 

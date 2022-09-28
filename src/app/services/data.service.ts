@@ -7,8 +7,8 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  // protected URL ="http://127.0.0.1:3000";
-  protected URL = 'https://lmsbackend.herokuapp.com';
+  protected URL ="http://127.0.0.1:3000";
+  // protected URL = 'https://lmsbackend.herokuapp.com';
 
   constructor(protected http: HttpClient) {
   }

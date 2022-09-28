@@ -21,12 +21,12 @@ export class ReportComponent implements OnInit {
   ngOnInit() {
     if(this.authService.loggedInUser().position == 'student'){
       //fetch cgpa
-      this.cgpa = "3.67";
-      this.pieChartLabels= [ "Courses","Test", "Assignments"];
+      this.cgpa = "18";
+      this.pieChartLabels= [ "Cursos","Cuestionarios", "Asignaciones"];
       this.pieChartData = [6, 3, 5];
 
     }else{
-      this.pieChartLabels= [ "Courses", "Students", "Test", "Assignments"];
+      this.pieChartLabels= [ "Cursos", "Estudiantes", "Cuestionarios", "Asignaciones"];
       this.pieChartData = [3, 10, 23, 10];
     }
   }

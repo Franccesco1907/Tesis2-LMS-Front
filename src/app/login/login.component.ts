@@ -28,9 +28,9 @@ export class LoginComponent implements OnInit {
   async ngOnInit() {
     try {
       const result  = await this.data.getRoles();
-
+      console.log("result", result)
       const roles = Object.keys(result.data[0]);
-      // console.log(roles)
+      console.log(roles)
 
       this.roles = roles.slice(1, 3);
       console.log(this.roles);

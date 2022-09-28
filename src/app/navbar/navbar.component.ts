@@ -8,7 +8,7 @@ import { AuthService } from './../services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  appName: string = "DOE ERP";
+  appName: string = "OLINO";
 
   constructor(private authService: AuthService) {  
   }
