@@ -11,7 +11,7 @@
           <h2>LOGIN</h2>
           <form class="pt-4" #f="ngForm" ngForm (change)="message.message? message.message = null: message.message" (ngSubmit)="onSubmit(f.value)">
             <mat-form-field class="mForm-field">
-              <input matInput name="username"  minlength="5" ngModel #username="ngModel" required placeholder="Username"  [value]="" required>
+              <input matInput name="username"  minlength="5" ngModel #username="ngModel" required placeholder="Usuario"  [value]="" required>
               <mat-icon matPrefix>person</mat-icon>
               <mat-error *ngIf="username.touched && !username.valid">
                 <div *ngIf="username.errors.required">Usuario es requerido</div>
@@ -21,7 +21,7 @@
             </mat-form-field>
           
             <mat-form-field class="mForm-field">
-              <input matInput [type]="hide ? 'password': 'text'" name="password" ngModel #password="ngModel" required type="password" placeholder="Password"  [value]="" required>
+              <input matInput [type]="hide ? 'password': 'text'" name="password" ngModel #password="ngModel" required type="password" placeholder="Contraseña"  [value]="" required>
               <mat-icon matPrefix>lock</mat-icon>
               <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               <mat-error *ngIf="password.touched && !password.valid">
@@ -38,10 +38,10 @@
             </mat-form-field>
 
             <mat-form-field class="mForm-field">
-              <mat-select placeholder="Role" ngModel #userRole required name="position">
+              <mat-select placeholder="Rol" ngModel #userRole required name="position">
                 <mat-option [value]=""></mat-option>
                 <mat-option *ngFor="let role of roles" [value]="role | lowercase">
-                  {{ role | titlecase }}
+                  {{  role == 'student' ? 'Estudiante' : 'Capacitador' }}
                 </mat-option>
               </mat-select>
               <mat-error *ngIf="userRole.touched && !userRole.valid">

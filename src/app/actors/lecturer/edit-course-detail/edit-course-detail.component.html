@@ -3,7 +3,7 @@
     <button mat-button  (click)="goBack()" class="go-back"> 
       <mat-icon >navigate_before</mat-icon> 
     </button>
-    EDIT COURSE INFO</h4>
+    EDITAR LA INFORMACIÓN DEL CURSO</h4>
   <!-- <div  [ngStyle]="{'position': 'absolute', 'right': '20px', 'top': '10px'}">
     <button 
     (click) = "updateCourse()"
@@ -25,17 +25,17 @@
         <div class="row">
           <div class="col">
             <div class="row">
-              <span class="title col-4" >COURSE NAME</span>
+              <span class="title col-4"> NOMBRE DEL CURSO </span>
               <span class="col"> {{ course.courseName }} </span>
             </div>
           </div>
           <div class="col-3">
-            <span class="title">REGISTERED STUDENTS</span>
+            <span class="title"> ESTUDIANTES REGISTRADOS </span>
             <span>{{ totalStudents}} </span>
           </div>
           <div class="col">
             <div class="row">
-              <span class="title col-4"> SEMESTER </span>
+              <span class="title col-4"> SEMESTRE </span>
               <span class="col"> {{ semester | titlecase }} </span>
             </div>
           </div>
@@ -45,12 +45,12 @@
           <div class="row">
             <div class="col">
               <div class="row">
-                <span class="title col-4">COURSE CODE</span>
+                <span class="title col-4"> CÓDIGO DEL CURSO </span>
                 <span class="col"> {{ course.courseCode }} </span>
               </div>
             </div>
             <div class="col-3">
-              <span class="title">SESSION</span>
+              <span class="title"> SESIÓN </span>
               <span> {{ session }} </span>
             </div>
             <div class="col">
@@ -140,7 +140,7 @@
                   </ul>
                 </div>
                 <ng-template #noCourseOutline>
-                    No course outline available at the moment...
+                  No hay esquema de curso disponible en este momento...
                 </ng-template>
               </div>
             </div>

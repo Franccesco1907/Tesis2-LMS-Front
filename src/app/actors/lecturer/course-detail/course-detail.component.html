@@ -3,11 +3,11 @@
     <button mat-button  (click)="goBack()" class="go-back"> 
       <mat-icon >navigate_before</mat-icon> 
     </button>
-    Course Info</h4>
+    INFORMACIÓN DE CURSO</h4>
   <div  [ngStyle]="{'position': 'absolute', 'right': '20px', 'top': '10px'}">
     <button 
     (click)="editCourse()"
-    mat-raised-button class="button-rounded inverse">EDIT COURSE</button>
+    mat-raised-button class="button-rounded inverse">EDITAR CURSO</button>
   </div>
   <div class="pt-1"></div>
 
@@ -24,17 +24,17 @@
         <div class="row">
           <div class="col">
             <div class="row">
-              <span class="title col-4" >COURSE NAME</span>
+              <span class="title col-4" >NOMBRE DEL CURSO</span>
               <span class="col"> {{ course.courseName }} </span>
             </div>
           </div>
           <div class="col-3">
-            <span class="title">REGISTERED STUDENTS</span>
+            <span class="title">ESTUDIANTES REGISTRADOS</span>
             <span>{{ totalStudents}} </span>
           </div>
           <div class="col">
             <div class="row">
-              <span class="title col-4"> SEMESTER </span>
+              <span class="title col-4"> SEMESTRE </span>
               <span class="col"> {{ semester | titlecase }} </span>
             </div>
           </div>
@@ -44,12 +44,12 @@
           <div class="row">
             <div class="col">
               <div class="row">
-                <span class="title col-4">COURSE CODE</span>
+                <span class="title col-4">CÓDIGO DEL CURSO</span>
                 <span class="col"> {{ course.courseCode }} </span>
               </div>
             </div>
             <div class="col-3">
-              <span class="title">SESSION</span>
+              <span class="title">SESIÓN</span>
               <span> {{ session }} </span>
             </div>
             <div class="col">
@@ -75,7 +75,7 @@
               </ul>
             </div>
             <ng-template #noCourseOutline>
-                No course outline available at the moment...
+              No hay esquema de curso disponible en este momento
             </ng-template>
           </div>
         </div>
@@ -94,13 +94,13 @@
                     <button *ngIf="material.file"
                       mat-stroked-button color="primary" 
                       (click)="openViewer(material)" 
-                      >View File</button>
+                      >Ver archivo</button>
                   </div>
                 </li>
               </ul>
             </div>
             <ng-template #noCourseMaterial>
-              No course materials at the moment...
+              No hay materiales del curso por ahora
             </ng-template>
           </div>
         </div> 
@@ -113,23 +113,23 @@
             <div *ngIf="course.assignment?.length != 0; else noCourseAssignment"  class="w-100">
               <ul class="course_ul courseAssignment">
                 <li *ngFor="let assignment of course.assignment"> 
-                  <span class="header"> QUESTION </span>
+                  <span class="header"> PREGUNTA </span>
                   <div class="body">
                     {{ assignment.question }}
                   </div>
                   <!-- <textarea [(ngModel)]="test" ></textarea> -->
                   <div class="footer gray-1">
                     <div>
-                      <span><mat-icon>schedule</mat-icon>Created Date: {{ assignment.createdDate | date }} </span>
-                      <span class="primary-color"><mat-icon>timer</mat-icon>Due Date: {{ assignment.dueDate | date }}</span>
+                      <span><mat-icon>schedule</mat-icon>Fecha de creación: {{ assignment.createdDate | date }} </span>
+                      <span class="primary-color"><mat-icon>timer</mat-icon>Fecha de vencimiento: {{ assignment.dueDate | date }}</span>
                     </div>
-                    <button mat-stroked-button (click)="openBottomSheet(assignment.id)">View Submissions</button>
+                    <button mat-stroked-button (click)="openBottomSheet(assignment.id)">Ver intentos</button>
                   </div>
                 </li>
               </ul>
             </div>
             <ng-template #noCourseAssignment>
-              No course assignments at the moment...
+              No hay cursos asignados por ahora
             </ng-template>
           </div>
         </div>
@@ -139,7 +139,7 @@
         <div class="container">
           <div class="row pt-2">
             <div class=" w-100">
-              <p *ngIf="registeredStudents.length == 0; else showCourses">No record available to show at the moment</p>
+              <p *ngIf="registeredStudents.length == 0; else showCourses">No hay registro disponible para mostrar en este momento</p>
               <ng-template #showCourses>
                 <div class="pt-2"></div>
 
@@ -154,42 +154,42 @@
 
                 <table align="center" mat-table [dataSource]="dataSource" class="pt-2 w-100">
                   <ng-container matColumnDef="sn">
-                    <th mat-header-cell *matHeaderCellDef> SN. </th>
+                    <th mat-header-cell *matHeaderCellDef> ID </th>
                     <td mat-cell *matCellDef="let element; let i= index"> {{ i+1 }} </td>
                   </ng-container>
                 
                   <ng-container matColumnDef="fullname">
-                      <th mat-header-cell *matHeaderCellDef> Full Name </th>
+                      <th mat-header-cell *matHeaderCellDef> Nombre completo </th>
                       <td mat-cell *matCellDef="let element"> {{ element.fullname }} </td>
                     </ng-container>
 
                   <ng-container matColumnDef="matricNo">
-                    <th mat-header-cell *matHeaderCellDef> Matric No</th>
+                    <th mat-header-cell *matHeaderCellDef> Número de matrícula </th>
                     <td mat-cell *matCellDef="let element"> {{ element.matricNo }} </td>
                   </ng-container>
     
                   <ng-container matColumnDef="assignments">
-                    <th mat-header-cell *matHeaderCellDef> Assignments</th>
+                    <th mat-header-cell *matHeaderCellDef> Tareas </th>
                     <td mat-cell *matCellDef="let element"> {{ element.assignments }} </td>
                   </ng-container>
                 
                   <ng-container matColumnDef="attendance">
-                      <th mat-header-cell *matHeaderCellDef>Attendance </th>
+                      <th mat-header-cell *matHeaderCellDef> Asistencia </th>
                       <td mat-cell *matCellDef="let element">{{ element.attendance }}</td>
                   </ng-container>
                 
                   <ng-container matColumnDef="tests">
-                      <th mat-header-cell *matHeaderCellDef>Tests </th>
+                      <th mat-header-cell *matHeaderCellDef> Pruebas </th>
                       <td mat-cell *matCellDef="let element"> {{ element.tests }} </td>
                   </ng-container>
     
                   <ng-container matColumnDef="exams">
-                      <th mat-header-cell *matHeaderCellDef>Exams </th>
+                      <th mat-header-cell *matHeaderCellDef> Exámenes </th>
                       <td mat-cell *matCellDef="let element"> {{ element.exams }} </td>
                   </ng-container>
     
                   <ng-container matColumnDef="grade">
-                      <th mat-header-cell *matHeaderCellDef>Grade </th>
+                      <th mat-header-cell *matHeaderCellDef> Notas </th>
                       <td mat-cell *matCellDef="let element"> {{ element.grade }} </td>
                   </ng-container>
 
@@ -202,19 +202,19 @@
                         <mat-menu #options="matMenu">
                           <button mat-menu-item>
                             <mat-icon>assignment_turned_in</mat-icon>
-                            <span>View Assignments </span>
+                            <span> Ver asignaciones </span>
                           </button>
                           <button mat-menu-item>
                             <mat-icon>edit</mat-icon>
-                            <span>View Tests</span>
+                            <span> Ver exámenes</span>
                           </button>
                           <button mat-menu-item>
                             <mat-icon>ballot</mat-icon>
-                            <span>View Attendance</span>
+                            <span> Ver Asistencia </span>
                           </button>
                           <button mat-menu-item>
                             <mat-icon>message</mat-icon>
-                            <span>Send Message</span>
+                            <span> Enviar mensaje </span>
                           </button>
                         </mat-menu>
                       </td>
