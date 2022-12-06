@@ -30,7 +30,7 @@ export class LecturerCoursesComponent implements OnInit {
     private courseService: CourseService, 
     private auth: AuthService, 
     private router: Router) {
-      this.sessionsList = [ "2018/2019", "2019/2020"];
+      this.sessionsList = [ "1", "2"];
       this.semestersList = ["first", "second"];
   }
 
@@ -60,7 +60,7 @@ export class LecturerCoursesComponent implements OnInit {
       this.coursesTable = this.coursesList = courseObj;
       this.dataSource = new MatTableDataSource(this.coursesTable);
 
-      this.displayedColumns= [ 'sn', 'courseCode', 'courseName', 'session', 'semester', 'units'];
+      this.displayedColumns= [ 'sn', 'courseCode', 'courseName', 'units'];
     }
     catch(e){
       this.error = e.message;

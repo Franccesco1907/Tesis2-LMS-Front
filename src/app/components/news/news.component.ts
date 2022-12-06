@@ -25,18 +25,14 @@ export class NewsComponent implements OnInit {
 
     this.news = [
       { 
-        title: "McConnell blocks resolution calling for Mueller report to be released publicly", 
-        body: `Senate Majority Leader Mitch McConnell (R-Ky.) on Monday blocked a resolution calling for special counsel Robert Mueller's report to be released publicly. 
-
-        Senate Minority Leader Charles Schumer (D-N.Y.) asked for unanimous consent for the nonbinding resolution, which cleared the House 420-0, to be passed by the Senate following Mueller's submission of his final report on Friday. `,
+        title: "Se creo un curso nuevo de seguridad y salud en el trabajo", 
+        body: `Es deber de los empleadores velar por la seguridad y la salud de sus trabajadores mediante la prevención de riesgos laborales, evitando que se produzcan enfermedades, incidentes o accidentes de trabajo que afecten la vida o integridad de los trabajadores.`,
         date: new Date().toLocaleString(),
         category: "news"
       },
       { 
-        title: "Pentagon authorizes $1B in counter-drug money for Trump's border wall", 
-        body: `Senate Majority Leader Mitch McConnell (R-Ky.) on Monday blocked a resolution calling for special counsel Robert Mueller's report to be released publicly. 
-
-        Senate Minority Leader Charles Schumer (D-N.Y.) asked for unanimous consent for the nonbinding resolution, which cleared the House 420-0, to be passed by the Senate following Mueller's submission of his final report on Friday. `,
+        title: "Uso de equipos de protección personal", 
+        body: `El Equipo de Protección Personal o EPP son equipos, piezas o dispositivos que evitan que una persona tenga contacto directo con los peligros de ambientes riesgosos, los cuales pueden generar lesiones y enfermedades.`,
         date: new Date().toLocaleString(),
         category: "news"
       },

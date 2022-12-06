@@ -26,8 +26,8 @@ export class ReportComponent implements OnInit {
       this.pieChartData = [6, 3, 5];
 
     }else{
-      this.pieChartLabels= [ "Cursos", "Estudiantes", "Cuestionarios", "Asignaciones"];
-      this.pieChartData = [3, 10, 23, 10];
+      this.pieChartLabels= [ "Cursos", "Estudiantes", "Cuestionarios"];
+      this.pieChartData = [3, 5, 3];
     }
   }
 

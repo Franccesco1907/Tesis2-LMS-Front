@@ -22,34 +22,27 @@
       <form>
         <div class="row">
           <div class="col">
-            <input type="search" #search placeholder="Search for a course" (keyup)="applyFilter(search.value)">
+            <input type="search" #search placeholder="Buscar un curso" (keyup)="applyFilter(search.value)">
           </div>
           <div class="w-100"></div>
-          <div class="col">
+          <!-- <div class="col">
             <span class="title">SESIÓN</span>
             <mat-form-field>
-              <mat-select name="session" (selectionChange)="onSelectChange($event)" placeholder="Select" #session [(ngModel)]="_session" required [disabled]="error"> 
+              <mat-select name="session" (selectionChange)="onSelectChange($event)" placeholder="Seleccione" #session [(ngModel)]="_session" required [disabled]="error"> 
                 <mat-option value=""></mat-option>
                 <mat-option *ngFor="let session of sessionsList" [value]="session"> {{ session }}</mat-option>
-
               </mat-select>
-              <!-- <mat-error *ngIf="docN.touched && !docN.valid">
-                <div *ngIf="docN.errors.required">Document name is required</div>
-              </mat-error> -->
             </mat-form-field>
-          </div>
-          <div class="col">
+          </div> -->
+          <!-- <div class="col">
             <span class="title">SEMESTRE</span>
             <mat-form-field>
-              <mat-select name="semester" (selectionChange)="onSelectChange($event)" placeholder="Select" #semester [(ngModel)]="_semester" required [disabled]="error"> 
+              <mat-select name="semester" (selectionChange)="onSelectChange($event)" placeholder="Seleccione" #semester [(ngModel)]="_semester" required [disabled]="error"> 
                 <mat-option value=""> </mat-option>
                 <mat-option *ngFor="let semester of semestersList" [value]="semester" > {{ semester | titlecase }} </mat-option>
               </mat-select>
-              <!-- <mat-error *ngIf="docN.touched && !docN.valid">
-                <div *ngIf="docN.errors.required">Document name is required</div>
-              </mat-error> -->
             </mat-form-field>
-          </div>
+          </div> -->
         </div>
       </form>
     </div>

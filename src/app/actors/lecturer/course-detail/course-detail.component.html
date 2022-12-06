@@ -62,7 +62,7 @@
     <mat-divider></mat-divider>
   
     <mat-tab-group id="tabContent">
-      <mat-tab label="COURSE OUTLINE"> 
+      <mat-tab label="ESQUEMA DEL CURSO"> 
         <div class="container">
           <div class="row pt-2">
             <div *ngIf="course.courseOutline; else noCourseOutline" class="w-100">
@@ -81,7 +81,7 @@
         </div>
         <div [ngStyle]="{'padding-top': '2em'}"></div>
       </mat-tab>
-      <mat-tab label="COURSE MATERIALS"> 
+      <mat-tab label="MATERIALES DEL CURSO"> 
         <div class="container">
           <div class="row pt-2">
             <div *ngIf="course.courseMaterial; else noCourseMaterial"  class="w-100">
@@ -106,7 +106,7 @@
         </div> 
         <div [ngStyle]="{'padding-top': '2em'}"></div>
       </mat-tab>
-      <mat-tab label="ASSIGNMENTS"> 
+      <mat-tab label="TAREAS"> 
         <div class="container">
           <div class="row pt-2">
             
@@ -135,7 +135,7 @@
         </div>
         <div [ngStyle]="{'padding-top': '2em'}"></div>
       </mat-tab>
-      <mat-tab label="REGISTERED STUDENTS"> 
+      <mat-tab label="ESTUDIANTES REGISTRADOS"> 
         <div class="container">
           <div class="row pt-2">
             <div class=" w-100">
